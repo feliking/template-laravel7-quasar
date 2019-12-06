@@ -72,9 +72,9 @@ export default {
       try {
         if (this.$refs.form.validate()) {
           if (this.selectedIndex != -1) {
-            await axios.put("api/ciudad/"+this.selectedItem.id, this.selectedItem)
+            await axios.put("api/sector/"+this.selectedItem.id, this.selectedItem)
           } else {
-            await axios.post("api/ciudad", this.selectedItem)
+            await axios.post("api/sector", this.selectedItem)
           }
           this.$toast.success('Correcto.')
           this.close();

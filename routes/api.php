@@ -29,34 +29,19 @@ Route::group(['middleware' => ['jwt']], function() {
     Route::apiResource('ciudad', 'CiudadController');
     Route::get('ciudad/fill/{param}', 'CiudadController@fill');
 
-    Route::apiResource('persona', 'PersonaController');
-    Route::get('persona/fill/{param}', 'PersonaController@fill');
+    Route::apiResource('lugar', 'LugarController');
+    Route::get('lugar/fill/{param}', 'LugarController@fill');
 
-    Route::apiResource('hobby', 'HobbyController');
-    Route::get('hobby/fill/{param}', 'HobbyController@fill');
+    Route::apiResource('delegado', 'DelegadoController');
+    Route::get('delegado/fill/{param}', 'DelegadoController@fill');
 
-    Route::apiResource('habilidad', 'HabilidadController');
-    Route::get('habilidad/fill/{param}', 'HabilidadController@fill');
+    Route::apiResource('sector', 'SectorController');
+    Route::get('sector/fill/{param}', 'SectorController@fill');
 
-    Route::apiResource('contacto', 'ContactoController');
-    Route::get('contacto/fill/{param}', 'ContactoController@fill');
+    Route::apiResource('institucion', 'InstitucionController');
+    Route::get('institucion/fill/{param}', 'InstitucionController@fill');
 
-    Route::apiResource('formacion_academica', 'FormacionAcademicaaController');
-    Route::get('formacion_academica/fill/{param}', 'FormacionAcademicaaController@fill');
-
-    Route::apiResource('idioma', 'IdiomaController');
-    Route::get('idioma/fill/{param}', 'IdiomaController@fill');
-
-    Route::apiResource('referencia_laboral', 'ReferenciaLaboralController');
-    Route::get('referencia_laboral/fill/{param}', 'ReferenciaLaboralController@fill');
-
-    Route::apiResource('software_manipulable', 'SoftwareManipulableController');
-    Route::get('software_manipulable/fill/{param}', 'SoftwareManipulableController@fill');
-
-    Route::apiResource('experiencia_laboral', 'ExperienciaLaboralController');
-    Route::get('experiencia_laboral/fill/{param}', 'ExperienciaLaboralController@fill');
-
-    Route::apiResource('tarea_realizada', 'TareaRealizadaController');
-    Route::get('tarea_realizada/fill/{param}', 'TareaRealizadaController@fill');
+    Route::apiResource('evento', 'EventoAcademicaaController');
+    Route::get('evento/fill/{param}', 'EventoController@fill');
 });
 

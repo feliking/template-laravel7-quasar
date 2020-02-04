@@ -9,6 +9,7 @@
 
 define('LARAVEL_START', microtime(true));
 
+// Configuración de cabeceras PHP para CORS
 header('Access-Control-Allow-Origin: *'); 
 // header("Access-Control-Allow-Credentials: true");
 // header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');

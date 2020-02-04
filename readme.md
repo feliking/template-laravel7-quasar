@@ -1,5 +1,5 @@
-# Generador de curriculums
-Esta aplicación esta diseñada para generar curriculums con diseños impresionantes para impresión y dígital, espero la disfruten tanto como yo cuando lo creé 
+# Plantilla Laravel 6, Vue 2.6, Vuex 3, 
+Plantilla para inicio de proyectos grandes y medianos basados en patrones MVC, servicios RESTful, microservicios, JWT adaptables a cualquier necesidad, CORS configurados para PHP y aplicaciones SPA
 
 ## Instalación:
 * Clonar el repositorio
@@ -18,5 +18,10 @@ Esta aplicación esta diseñada para generar curriculums con diseños impresiona
 * Ejecuta en la consola o terminal `npm run prod` para producción
 
 ## Bonus
-* Se agregó el comando "rest:model" para crear servicios con un solo comando(ej: php artisan rest:model nombre_modelo -mc) crea toda la estructura desde el modelo controlador y migración con servicios RestFull implementados
+* Se agregó el comando "rest:model" para crear servicios con un solo comando(ej: php artisan rest:model nombre_modelo -mc) crea toda la estructura desde el modelo controlador y migración con servicios RESTful implementados
 * Control de acciones incluído para todos los cambios dentro del sistema
+* Configuración de CORS en el archivo `public/index.php`
+
+## Nota
+
+Este template fue diseñado a partir de varias plantillas Laravel y VueJS de código abierto y puede seguir siendo mejorado...

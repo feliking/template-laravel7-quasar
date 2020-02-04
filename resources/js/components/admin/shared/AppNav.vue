@@ -122,22 +122,7 @@ export default {
           { title: 'Profile', icon: 'person', to: {name: 'profile'}, exact: false }
         ],
         [
-          { title: 'Departamentos', icon: 'map', to: {name: 'departamento'}, exact: false }
-        ],
-        [
-          { title: 'Sectores', icon: 'map', to: {name: 'sector'}, exact: false }
-        ],
-        [
           { title: 'Lugares', icon: 'map', to: {name: 'lugar'}, exact: false }
-        ],
-        [
-          { title: 'Delegados', icon: 'map', to: {name: 'delegado'}, exact: false }
-        ],
-        [
-          { title: 'Institución', icon: 'map', to: {name: 'institucion'}, exact: false }
-        ],
-        [
-          { title: 'Eventos', icon: 'map', to: {name: 'evento'}, exact: false }
         ],
         [
           { title: 'Logout', icon: 'power_settings_new', action: this.logout }

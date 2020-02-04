@@ -24,24 +24,9 @@ Route::group(['middleware' => ['guest:api']], function() {
 Route::group(['middleware' => ['jwt']], function() {
     Route::post('logout', 'Auth\LoginController@logout');
     Route::get('me', 'Auth\LoginController@me');
-    Route::put('profile', 'ProfileController@update');
-
-    Route::apiResource('ciudad', 'CiudadController');
-    Route::get('ciudad/fill/{param}', 'CiudadController@fill');
 
     Route::apiResource('lugar', 'LugarController');
     Route::get('lugar/fill/{param}', 'LugarController@fill');
 
-    Route::apiResource('delegado', 'DelegadoController');
-    Route::get('delegado/fill/{param}', 'DelegadoController@fill');
-
-    Route::apiResource('sector', 'SectorController');
-    Route::get('sector/fill/{param}', 'SectorController@fill');
-
-    Route::apiResource('institucion', 'InstitucionController');
-    Route::get('institucion/fill/{param}', 'InstitucionController@fill');
-
-    Route::apiResource('evento', 'EventoAcademicaaController');
-    Route::get('evento/fill/{param}', 'EventoController@fill');
 });
 

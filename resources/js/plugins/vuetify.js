@@ -12,7 +12,5 @@ Vue.use(Vuetify, {
 Vue.use(VuetifyToast)
 
 export default new Vuetify({
-  theme: {
-    dark: true,
-  },
+  
 })

@@ -1,5 +1,5 @@
 <template>
-	<v-app-bar dark :clipped-left="$vuetify.breakpoint.mdAndUp" fixed app>
+	<v-app-bar color="primary" :clipped-left="$vuetify.breakpoint.mdAndUp" fixed app>
     <v-app-bar-nav-icon @click.stop="navToggle"></v-app-bar-nav-icon>
 
     <v-toolbar-title class="white--text">{{ siteName }}</v-toolbar-title>

@@ -1,20 +1,20 @@
 <template>
-  <v-navigation-drawer fixed app :permanent="$vuetify.breakpoint.mdAndUp" :mini-variant.sync="$vuetify.breakpoint.mdAndUp && mini" :clipped="$vuetify.breakpoint.mdAndUp" :value="mini" :width="300">
+  <v-navigation-drawer color="primary" fixed app :permanent="$vuetify.breakpoint.mdAndUp" :mini-variant.sync="$vuetify.breakpoint.mdAndUp && mini" :clipped="$vuetify.breakpoint.mdAndUp" :value="mini" :width="300">
     <v-list class="py-0">
       <v-list-item>
         <v-list-item-icon v-show="$vuetify.breakpoint.mdAndUp && mini">
           <v-btn small icon @click.native.stop="navToggle" class="mx-0">
-            <v-icon>chevron_right</v-icon>
+            <v-icon class="white--text">chevron_right</v-icon>
           </v-btn>
         </v-list-item-icon>
 
         <v-list-item-content>
-          <v-list-item-title>{{ name }}</v-list-item-title>
+          <v-list-item-title class="white--text">{{ name }}</v-list-item-title>
         </v-list-item-content>
 
         <v-list-item-icon>
           <v-btn small icon @click.native.stop="navToggle" class="mx-0">
-            <v-icon>chevron_left</v-icon>
+            <v-icon class="white--text">chevron_left</v-icon>
           </v-btn>
         </v-list-item-icon>
       </v-list-item>
@@ -29,10 +29,11 @@
           :prepend-icon="item.icon"
           no-action
           :key="item.title"
+          class="white--text"
         >
           <template v-slot:activator>
             <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <v-list-item-title class="white--text">{{ item.title }}</v-list-item-title>
             </v-list-item-content>
           </template>
 
@@ -45,11 +46,11 @@
             :exact="subItem.exact !== undefined ? subItem.exact : true"
           >
             <v-list-item-content class="pl-2">
-              <v-list-item-title>{{ subItem.title }}</v-list-item-title>
+              <v-list-item-title class="white--text">{{ subItem.title }}</v-list-item-title>
             </v-list-item-content>
 
             <v-list-item-icon>
-              <v-icon>{{ subItem.icon }}</v-icon>
+              <v-icon class="white--text">{{ subItem.icon }}</v-icon>
             </v-list-item-icon>
           </v-list-item>
         </v-list-group>
@@ -64,11 +65,11 @@
           :key="item.title"
         >
           <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon class="white--text">{{ item.icon }}</v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-title class="white--text">{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </template>
@@ -126,7 +127,7 @@ export default {
         ],
         [
           { title: 'Logout', icon: 'power_settings_new', action: this.logout }
-        ]
+        ],
       ]
     }
   }

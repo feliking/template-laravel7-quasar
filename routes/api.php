@@ -25,6 +25,10 @@ Route::group(['middleware' => ['jwt']], function() {
     Route::post('logout', 'Auth\LoginController@logout');
     Route::get('me', 'Auth\LoginController@me');
 
+    Route::post('upload/file', 'UploadController@file');
+    Route::post('upload/base64_image', 'UploadController@base64_image');
+    Route::post('upload/delete', 'UploadController@delete');
+
     Route::apiResource('lugar', 'LugarController');
     Route::get('lugar/fill/{param}', 'LugarController@fill');
 

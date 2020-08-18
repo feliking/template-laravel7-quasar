@@ -10,9 +10,19 @@ Vue.use(Vuetify, {
     VIcon
   },
 })
-Vue.use(VuetifyToast)
+// Vue.use(VuetifyToast)
 
-export default new Vuetify({
+// export default new Vuetify({
+//   theme:{
+//     themes: {
+//       light: {
+//         primary: colors.red.darken4,
+//       },
+//     },
+//   }
+// })
+
+const opts = {
   theme:{
     themes: {
       light: {
@@ -20,4 +30,10 @@ export default new Vuetify({
       },
     },
   }
-})
+}; 
+
+const vueObj = new Vuetify(opts);
+
+export default vueObj;
+
+Vue.use(VuetifyToast, { $vuetify: vueObj.framework });

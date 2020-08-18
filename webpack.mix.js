@@ -14,6 +14,7 @@ const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/styles/app.sass', 'public/css')
+   .copy(['resources/css/material-icons.css', 'resources/css/material.woff2'], 'public/css')
 
 mix.webpackConfig({
   resolve: {

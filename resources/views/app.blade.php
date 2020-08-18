@@ -8,7 +8,8 @@
 
         <title>{{ config('app.name') }}</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <link href="{{ asset('css/material-icons.css') }}" rel="stylesheet">
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
 
         <script>

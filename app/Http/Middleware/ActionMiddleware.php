@@ -2,7 +2,7 @@
 
 namespace App\Http\Middleware;
 
-use App\Action;
+use App\Models\Action;
 use Closure;
 use Illuminate\Support\Facades\Log;
 

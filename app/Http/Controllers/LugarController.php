@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Lugar;
+use App\Models\Lugar;
 use Illuminate\Http\Request;
 
 class LugarController extends Controller

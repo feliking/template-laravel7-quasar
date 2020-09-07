@@ -24,11 +24,7 @@ Vue.use(Vuetify, {
 
 const opts = {
   theme:{
-    themes: {
-      light: {
-        primary: colors.red.darken4,
-      },
-    },
+    light: true
   }
 }; 
 

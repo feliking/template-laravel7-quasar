@@ -14,7 +14,7 @@ class LugarController extends Controller
      */
     public function index()
     {
-        return Lugar::get();
+        return Lugar::paginate(10);
     }
 
     /**

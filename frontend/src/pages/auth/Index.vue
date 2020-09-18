@@ -1,50 +1,62 @@
 <template>
   <q-page padding class="flex flex-center">
-    <q-card style="min-width: 500px">
-      <q-form @submit="submit()">
-        <q-toolbar class="bg-primary glossy text-white">
-          <q-toolbar-title>Login</q-toolbar-title>
-        </q-toolbar>
-        <q-card-section class="q-gutter-sm">
-          <q-input
-            v-model="form.email"
-            label="Correo Electrónico"
-            :rules="[rules.required('email')]"
-            @input="clearErrors('email')">
-            <template v-slot:prepend>
-              <q-icon name="people" />
-            </template>
-          </q-input>
-          <q-input
-            v-model="form.password"
-            :type="isPwd ? 'password' : 'text'"
-            label="Contraseña"
-            :rules="[rules.required('password')]"
-            @input="clearErrors('password')">
-            <template v-slot:append>
-              <q-icon
-                :name="isPwd ? 'visibility_off' : 'visibility'"
-                class="cursor-pointer"
-                @click="isPwd = !isPwd"
-              />
-            </template>
-            <template v-slot:prepend>
-              <q-icon name="lock" />
-            </template>
-          </q-input>
-        </q-card-section>
-        <q-card-actions>
-          <q-btn
-            color="primary"
-            class="full-width glossy"
-            rounded
-            type="submit"
-            :loading="loading">
-            Ingresar
-          </q-btn>
-        </q-card-actions>
-      </q-form>
-    </q-card>
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div class="text-center">
+          <q-img
+            alt="Quasar logo"
+            src="../../assets/quasar-logo-full.svg"
+            style="width: 200px"
+            class="q-my-lg"
+          />
+        </div>
+        <q-card style="min-width: 350px" class="text-center">
+          <q-form @submit="submit()">
+            <q-toolbar class="bg-blue-5 text-white">
+              <q-toolbar-title>LOGIN</q-toolbar-title>
+            </q-toolbar>
+            <q-card-section>
+              <q-input
+                v-model="form.email"
+                label="Correo Electrónico"
+                :rules="[rules.required('email')]"
+                @input="clearErrors('email')">
+                <template v-slot:prepend>
+                  <q-icon name="people" />
+                </template>
+              </q-input>
+              <q-input
+                v-model="form.password"
+                :type="isPwd ? 'password' : 'text'"
+                label="Contraseña"
+                :rules="[rules.required('password')]"
+                @input="clearErrors('password')">
+                <template v-slot:append>
+                  <q-icon
+                    :name="isPwd ? 'visibility_off' : 'visibility'"
+                    class="cursor-pointer"
+                    @click="isPwd = !isPwd"
+                  />
+                </template>
+                <template v-slot:prepend>
+                  <q-icon name="lock" />
+                </template>
+              </q-input>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn
+                color="primary"
+                class="full-width glossy"
+                rounded
+                type="submit"
+                :loading="loading">
+                Ingresar
+              </q-btn>
+            </q-card-actions>
+          </q-form>
+        </q-card>
+      </div>
+    </div>
   </q-page>
 </template>
 

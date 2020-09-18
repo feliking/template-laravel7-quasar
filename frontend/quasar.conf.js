@@ -102,7 +102,12 @@ module.exports = function (/* ctx */) {
       plugins: [
         'Notify',
         'LocalStorage'
-      ]
+      ],
+      config: {
+        notify: {
+          timeout: 1000
+        }
+      }
     },
 
     // animations: 'all', // --- includes all animations

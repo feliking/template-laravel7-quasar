@@ -21,7 +21,12 @@ export default [
         {
           path: '',
           name: 'index',
-          component: () => import('pages/Index.vue')
+          component: () => import('pages/dashboard/Index.vue')
+        },
+        {
+          path: '/lugares_ssp',
+          name: 'lugar_ssp',
+          component: () => import('pages/lugar_ssp/Index.vue')
         },
         {
           path: '/lugares',

@@ -31,6 +31,7 @@ Route::group(['middleware' => ['jwt']], function() {
 
     Route::apiResource('lugar', 'LugarController');
     Route::get('lugar/fill/{param}', 'LugarController@fill');
+    Route::get('lugar/paginate/{nro_pages}', 'LugarController@paginate');
 
 });
 

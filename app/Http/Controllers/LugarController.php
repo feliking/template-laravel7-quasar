@@ -14,7 +14,8 @@ class LugarController extends Controller
      */
     public function index()
     {
-        return Lugar::paginate(10);
+        // return Lugar::paginate(10); // SSP
+        return Lugar::get();
     }
 
     /**
@@ -77,5 +78,10 @@ class LugarController extends Controller
     {
         $request = json_decode($request, true);
         return Lugar::where($request)->get();
+    }
+
+    public function paginate($nro_pages)
+    {
+        return Lugar::paginate($nro_pages);
     }
 }

@@ -26,11 +26,8 @@
             hint="Obligatorio*"
             @keyup="checkNewRepeat()"
           />
-          <span class="text-red">{{ error }}</span>
-        </div>
-        <div class="col-12 col-md-auto">
           <q-btn
-            class="full-width glossy"
+            class="full-width glossy q-mt-sm"
             rounded
             color="primary"
             type="submit"
@@ -39,6 +36,7 @@
           >
             Cambiar contraseña
           </q-btn>
+          <span class="text-red">{{ error }}</span>
         </div>
       </div>
     </q-form>

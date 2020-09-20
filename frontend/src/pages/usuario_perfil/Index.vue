@@ -17,10 +17,8 @@
             hint="Obligatorio*"
             :disable="edit"
           />
-        </div>
-        <div class="col-12 col-md-auto">
           <q-btn
-            class="full-width glossy"
+            class="full-width glossy q-my-sm"
             rounded
             color="primary"
             type="submit"

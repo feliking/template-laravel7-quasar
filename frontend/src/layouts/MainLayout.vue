@@ -14,6 +14,25 @@
         <q-toolbar-title>
           {{ title }}
         </q-toolbar-title>
+        <q-avatar>
+          <img :src="`https://ui-avatars.com/api/?name=${$store.state.auth.user.name}`" alt="">
+        </q-avatar>
+        <q-btn flat color="white" :label="`${$store.state.auth.user.name}`">
+          <q-menu>
+            <q-list style="min-width: 100px">
+              <q-item clickable v-close-popup to="/perfil">
+                <q-item-section>Perfil</q-item-section>
+              </q-item>
+              <q-item clickable v-close-popup to="/change_password">
+                <q-item-section>Cambiar contraseña</q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item clickable v-close-popup @click="logout()">
+                <q-item-section>Cerrar sesión</q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
 
       </q-toolbar>
     </q-header>
@@ -48,6 +67,15 @@ export default {
   methods: {
     switchDrawer () {
       this.$root.$emit('switchDrawer')
+    },
+    async logout () {
+      await this.$store.dispatch('auth/logout')
+      this.$q.notify({
+        message: 'Sesión cerrada',
+        color: 'negative',
+        position: 'bottom-right'
+      })
+      this.$router.push({ name: 'login' })
     }
   },
   mounted () {

@@ -20,7 +20,6 @@ export default ({ app, router, store, Vue }) => {
     return response
   }, async error => {
     if (store.getters['auth/token']) {
-      // TODO: Find more reliable way to determine when Token state
       if (error.response.status === 401 && error.response.data.message === 'Token has expired') {
         const { data } = await axios.post('login/refresh')
         store.dispatch('auth/saveToken', data)
@@ -28,16 +27,16 @@ export default ({ app, router, store, Vue }) => {
       }
       if (error.response.status === 401 ||
         (error.response.status === 500 && (
-          error.response.data.message === 'Token has expired and can no longer be refreshed' ||
-          error.response.data.message === 'The token has been blacklisted'
+          error.response.data.message === 'El token expiró y no puede actualizarse de nuevo' ||
+          error.response.data.message === 'El token esta en la lista negra'
         ))
       ) {
         store.dispatch('auth/destroy')
         router.push({ name: 'login' })
       }
     }
-    error.response.data.message !== undefined && Notify.create({ color: 'negative', message: 'Something went wrong.', position: 'bottom-right' })
-    error.response.data.error !== undefined && Notify.create({ color: 'negative', message: 'Something went wrong.', position: 'bottom-right' })
+    error.response.data.message !== undefined && Notify.create({ color: 'negative', message: 'Algo salió mal.', position: 'bottom-right' })
+    error.response.data.error !== undefined && Notify.create({ color: 'negative', message: 'Algo salió mal.', position: 'bottom-right' })
     return Promise.reject(error)
   })
   Vue.prototype.$axios = axios

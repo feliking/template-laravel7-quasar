@@ -24,6 +24,8 @@ Route::group(['middleware' => ['guest:api']], function() {
 Route::group(['middleware' => ['jwt']], function() {
     Route::post('logout', 'Auth\LoginController@logout');
     Route::get('me', 'Auth\LoginController@me');
+    Route::apiResource('user', 'UserController');
+    Route::post('change_password', 'UserController@change_password');
 
     Route::post('upload/file', 'UploadController@file');
     Route::post('upload/base64_image', 'UploadController@base64_image');
@@ -32,6 +34,5 @@ Route::group(['middleware' => ['jwt']], function() {
     Route::apiResource('lugar', 'LugarController');
     Route::get('lugar/fill/{param}', 'LugarController@fill');
     Route::get('lugar/paginate/{nro_pages}', 'LugarController@paginate');
-
 });
 

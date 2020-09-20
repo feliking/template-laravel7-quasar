@@ -13,10 +13,5 @@ export const nav = [
     title: 'Lugares SSP',
     icon: 'map',
     to: { name: 'lugar_ssp' }
-  },
-  {
-    title: 'Logout',
-    icon: 'power_settings_new',
-    action: 'logout'
   }
 ]

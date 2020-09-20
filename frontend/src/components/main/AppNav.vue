@@ -21,7 +21,7 @@
             v-ripple
             v-if="!item.children"
             :to="item.to"
-            @click.native="item.action ? logout() : false">
+          >
             <q-item-section avatar>
               <q-icon :name="item.icon" />
             </q-item-section>
@@ -73,17 +73,6 @@ export default {
     this.$root.$on('switchDrawer', () => {
       this.drawer = !this.drawer
     })
-  },
-  methods: {
-    async logout () {
-      await this.$store.dispatch('auth/logout')
-      this.$q.notify({
-        message: 'Sesión cerrada',
-        color: 'negative',
-        position: 'bottom-right'
-      })
-      this.$router.push({ name: 'login' })
-    }
   }
 }
 </script>

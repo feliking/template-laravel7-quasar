@@ -105,7 +105,8 @@ module.exports = function (/* ctx */) {
       ],
       config: {
         notify: {
-          timeout: 1000
+          timeout: 1000,
+          position: 'bottom-right'
         }
       }
     },

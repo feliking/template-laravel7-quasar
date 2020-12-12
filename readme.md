@@ -26,9 +26,6 @@ Plantilla para inicio de proyectos grandes y medianos basados en patrones MVC, s
 * Para generar los archivos de producción ejecuta en la consola o terminal `quasar build`
 * Ahora copia los archivos generados en la ruta `/dist/spa` a la ruta `/public` de laravel y listo!!!!!
 
-## Uso
-* Copiar los archivos de producción de su aplicación frontend en `resources/views`
-
 ## Bonus
 * Se agregó el comando "rest:model" para crear servicios con un solo comando(ej: php artisan rest:model nombre_modelo -mc) crea toda la estructura desde el modelo controlador y migración con servicios RESTful implementados
 * Control de acciones incluído para todos los cambios dentro del sistema

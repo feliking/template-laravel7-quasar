@@ -35,7 +35,7 @@ export default ({ app, router, store, Vue }) => {
         router.push({ name: 'login' })
       }
     }
-    error.response.data.message !== undefined && Notify.create({ color: 'negative', message: 'Algo salió mal.', position: 'bottom-right' })
+    error.response.data.message !== undefined && Notify.create({ color: 'negative', message: error.response.data.message, position: 'bottom-right' })
     error.response.data.error !== undefined && Notify.create({ color: 'negative', message: 'Algo salió mal.', position: 'bottom-right' })
     return Promise.reject(error)
   })

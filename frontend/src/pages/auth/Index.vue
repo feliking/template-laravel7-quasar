@@ -10,11 +10,8 @@
             class="q-my-lg"
           />
         </div>
-        <q-card style="min-width: 350px" class="text-center">
+        <q-card style="min-width: 350px" class="text-center shadow-5">
           <q-form @submit="submit()">
-            <q-toolbar class="bg-blue-5 text-white">
-              <q-toolbar-title>LOGIN</q-toolbar-title>
-            </q-toolbar>
             <q-card-section>
               <q-input
                 v-model="form.email"
@@ -46,8 +43,7 @@
             <q-card-actions>
               <q-btn
                 color="primary"
-                class="full-width glossy"
-                rounded
+                class="full-width"
                 type="submit"
                 :loading="loading">
                 Ingresar

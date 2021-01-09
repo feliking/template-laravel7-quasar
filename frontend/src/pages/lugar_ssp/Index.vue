@@ -12,11 +12,6 @@
       :filter="filter"
     >
     <template v-slot:top-right>
-      <q-input borderless class="q-mr-lg" dense debounce="300" v-model="filter" placeholder="Search">
-        <template v-slot:append>
-          <q-icon name="search" />
-        </template>
-      </q-input>
       <q-space></q-space>
       <q-separator vertical />
       <q-btn
@@ -144,8 +139,7 @@ export default {
         }
       ],
       table: [],
-      loading: false,
-      filter: ''
+      loading: false
     }
   },
 
